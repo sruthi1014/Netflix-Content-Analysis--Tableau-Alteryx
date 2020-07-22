@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>netflix_titles.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="show_id" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="type" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="title" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="director" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="cast" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="country" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="date_added" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="release_year" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="rating" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="duration" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="listed_in" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+            <Field name="description" size="254" source="File: E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_titles.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="show_id" selected="True" />
+            <SelectField field="type" selected="True" />
+            <SelectField field="title" selected="True" />
+            <SelectField field="director" selected="True" />
+            <SelectField field="country" selected="True" />
+            <SelectField field="release_year" selected="True" />
+            <SelectField field="rating" selected="True" />
+            <SelectField field="listed_in" selected="True" />
+            <SelectField field="description" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="270" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>country</Field>
+          <ErrorHandling>Warn</ErrorHandling>
+          <RootName>country</RootName>
+          <Delimeters value="," />
+          <NumFields value="12" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="show_id" selected="True" />
+            <SelectField field="type" selected="True" />
+            <SelectField field="title" selected="True" />
+            <SelectField field="director" selected="True" />
+            <SelectField field="country" selected="True" />
+            <SelectField field="release_year" selected="True" />
+            <SelectField field="rating" selected="True" />
+            <SelectField field="listed_in" selected="True" />
+            <SelectField field="description" selected="True" />
+            <SelectField field="country1" selected="True" />
+            <SelectField field="country2" selected="True" />
+            <SelectField field="country3" selected="True" />
+            <SelectField field="country4" selected="True" />
+            <SelectField field="country5" selected="True" />
+            <SelectField field="country6" selected="True" />
+            <SelectField field="country7" selected="True" />
+            <SelectField field="country8" selected="True" />
+            <SelectField field="country9" selected="True" />
+            <SelectField field="country10" selected="True" />
+            <SelectField field="country11" selected="True" />
+            <SelectField field="country12" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="438" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="show_id" />
+            <Field field="type" />
+            <Field field="title" />
+            <Field field="director" />
+            <Field field="country" />
+            <Field field="release_year" />
+            <Field field="rating" />
+            <Field field="listed_in" />
+            <Field field="description" />
+          </KeyFields>
+          <DataFields>
+            <Field field="show_id" selected="True" />
+            <Field field="type" selected="True" />
+            <Field field="title" selected="True" />
+            <Field field="director" selected="True" />
+            <Field field="country" selected="True" />
+            <Field field="release_year" selected="True" />
+            <Field field="rating" selected="True" />
+            <Field field="listed_in" selected="True" />
+            <Field field="description" selected="True" />
+            <Field field="country1" selected="True" />
+            <Field field="country2" selected="True" />
+            <Field field="country3" selected="True" />
+            <Field field="country4" selected="True" />
+            <Field field="country5" selected="True" />
+            <Field field="country6" selected="True" />
+            <Field field="country7" selected="True" />
+            <Field field="country8" selected="True" />
+            <Field field="country9" selected="True" />
+            <Field field="country10" selected="True" />
+            <Field field="country11" selected="True" />
+            <Field field="country12" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="522" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>Value</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-07-20 14:15:09</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2020-07-20 14:15:09</StartDate>
+              <EndDate>2020-07-20 14:15:09</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Value])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="582" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sruth\AppData\Local\Temp\Engine_27816_f13ee0cb717b4dbfab02f3061e9cfd45_\Engine_21680_8552c44f2c984a8cb4962d3f00f619ce_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="618" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>listed_in</Field>
+          <ErrorHandling>Error</ErrorHandling>
+          <RootName>listed_in</RootName>
+          <Delimeters value="," />
+          <NumFields value="4" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="690" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="show_id" selected="True" />
+            <SelectField field="type" selected="True" />
+            <SelectField field="title" selected="True" />
+            <SelectField field="director" selected="True" />
+            <SelectField field="release_year" selected="True" />
+            <SelectField field="rating" selected="True" />
+            <SelectField field="description" selected="True" />
+            <SelectField field="Value" selected="True" />
+            <SelectField field="listed_in1" selected="True" />
+            <SelectField field="listed_in2" selected="True" />
+            <SelectField field="listed_in3" selected="True" />
+            <SelectField field="listed_in4" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="762" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="show_id" />
+            <Field field="type" />
+            <Field field="title" />
+            <Field field="director" />
+            <Field field="release_year" />
+            <Field field="rating" />
+            <Field field="description" />
+            <Field field="Value" />
+          </KeyFields>
+          <DataFields>
+            <Field field="show_id" selected="False" />
+            <Field field="type" selected="False" />
+            <Field field="title" selected="False" />
+            <Field field="director" selected="False" />
+            <Field field="release_year" selected="False" />
+            <Field field="rating" selected="False" />
+            <Field field="description" selected="False" />
+            <Field field="Value" selected="False" />
+            <Field field="listed_in1" selected="True" />
+            <Field field="listed_in2" selected="True" />
+            <Field field="listed_in3" selected="True" />
+            <Field field="listed_in4" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="846" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>Value2</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-07-20 14:21:33</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2020-07-20 14:21:33</StartDate>
+              <EndDate>2020-07-20 14:21:33</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Value2])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="918" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sruth\AppData\Local\Temp\Engine_27816_f13ee0cb717b4dbfab02f3061e9cfd45_\Engine_21680_a1c5013eed9f479c9079977fc5c103bd_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="930" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="show_id" selected="True" />
+            <SelectField field="type" selected="True" />
+            <SelectField field="title" selected="True" />
+            <SelectField field="director" selected="True" />
+            <SelectField field="release_year" selected="True" />
+            <SelectField field="rating" selected="True" />
+            <SelectField field="description" selected="True" />
+            <SelectField field="Value" selected="True" rename="country" />
+            <SelectField field="Name" selected="True" />
+            <SelectField field="Value2" selected="True" rename="genre" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="990" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">E:\MS_Studies\summer_projects\tableau\434238_901459_bundle_archive\netflix_transformed.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>netflix_transformed.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="False" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="False" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>netflix dataclean workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
