@@ -8,6 +8,7 @@
 ### Introduction
 
 [Netflix Content Analysis](https://github.com/sruthi1014/Netflix-Content-Analysis--Tableau-Alteryx/blob/master/netflixcontentanalysis.twbx) file has the Visualization of the analysis
+I have published an article on Medium explaining the process. Here is the [link](https://medium.com/swlh/a-simple-way-to-explore-the-netflix-content-using-tableau-5b06e17e443)
 
 ### Technologies
 Project is created with:
